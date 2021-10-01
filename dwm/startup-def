@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# startup consists of two parts:
+#     - the statusbar
+#     - the battery notifier
+
+# Don't alter these variables
+batWarned=0
+
+# These are variables you should alter to your liking
+batCriticalLevel="15"
+batCriticalMsg="Your battery is critically low (Below $batCriticalLevel%)"
+
+# =============================== SHELL COMMANDS =============================== #
+bgman -l         # Background image
+setxkbmap ba     # X keyboard layout
+xcompmgr &       # X Composite Manager
+# ================================ REGION END ================================== #
+
+while true; do
+
+	# ========================== STATUSBAR MAINTAINER ========================== #
+
+	bRaw="$(acpi -b)"; bRaw="${bRaw#"Battery 0: "}"
+	bState="$(echo "$bRaw" | awk -F ", " '{ print $1 }' | head -c 1)"
+	bPerc="$(echo "$bRaw" | awk -F ", " '{ print $2 }')"
+
+	dLocal="$(date +"%H:%M:%S %a %d-%m-%Y ")"
+
+	wName="$(iwgetid | awk -F "\"" '{ print $2 }')"
+	if [ -z "$wName" ]; then
+		if [ "$(nmcli radio wifi)" == "enabled" ]
+			then wName="<none>"
+			else wName="<off>"
+		fi
+	fi
+
+	kLayout="$(setxkbmap -query | grep layout | awk '{ print $2 }' )"
+
+	xsetroot -name "  $bPerc ($bState) |  $wName |  $kLayout |  $dLocal "
+
+	# =========================== BATTERY MAINTAINER =========================== #
+
+	bPercNum="${bPerc%?}"
+
+	if [ "$bPercNum" -le "$batCriticalLevel" ] && [ "$batWarned" == "0" ] && [ "$bState" == "D" ]; then
+		batWarned=1
+		notify-send "statusbar" "$batCriticalMsg"
+	fi
+	if [ "$bState" == "C" ] || [ "$bState" == "F" ]; then
+		batWarned=0
+	fi
+
+	# ================================ LOOP END ================================ #
+
+	sleep 1
+
+done
