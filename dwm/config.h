@@ -4,7 +4,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;         /* border pixel of windows */
-static const unsigned int gappx     = 32;        /* gap pixel between windows */
+static const unsigned int gappx     = 16;        /* gap pixel between windows */
 static const unsigned int snap      = 8;         /* snap pixel */
 static const int showbar            = 1;         /* 0 means no bar */
 static const int topbar             = 1;         /* 0 means bottom bar */
@@ -15,8 +15,8 @@ static const char col_gray3[]       = "#aaa";    /* "#bbbbbb" */
 static const char col_gray4[]       = "#ddd";    /* "#eeeeee" */
 static const char col_cyan[]        = "#502739"; /* "#005577" */
 
-static const char *fonts[]          = { "Hack Nerd Font Mono:pixelsize=15:antialias=true:autohint=true" };
-static const char dmenufont[]       = "Hack Nerd Font Mono:pixelsize=15:antialias=true:autohint=true";
+static const char *fonts[]          = { "Hack Nerd Font Mono:pixelsize=16:antialias=true:autohint=true" };
+static const char dmenufont[]       = "Hack Nerd Font Mono:pixelsize=16:antialias=true:autohint=true";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -69,19 +69,19 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
-static const char *alsamixer[] = { "st", "-e", "alsamixer", NULL };
-static const char *transsetdf[] = { "transset-df", "0.85", NULL };
-static const char *lmmsProjBoot[] = { "lmmsProjectBooter", NULL };
-static const char *slock[] = { "slock", NULL };
+static const char *spawnLMMS[]       = { "lmmsProjectBooter", NULL };
+static const char *spawnMixer[]      = { "st", "-e", "alsamixer", NULL };
+static const char *spawnScreencap[]  = { "screencap", NULL };
+static const char *spawnSlock[]      = { "slock", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 
-	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = alsamixer } },
-	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = transsetdf } },
-	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lmmsProjBoot } },
-	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = slock } },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = spawnLMMS} },
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = spawnMixer} },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = spawnScreencap} },
+	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = spawnSlock} },
 
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },

@@ -102,9 +102,9 @@ sudo make clean install
 
 | Mask             | Key    | Function                                            |
 | -------          | ------ | --------------------------------------------------- |
-| ModKey-ShiftMask | M      | Spawn an instance of `alsamixer`                    |
-| ModKey-ShiftMask | T      | Spawn an instance of `transset-df` with `.85` alpha |
 | ModKey-ShiftMask | L      | Spawn an instance of `lmmsProjectBooter`            |
+| ModKey-ShiftMask | M      | Spawn an instance of `alsamixer`                    |
+| ModKey-ShiftMask | S      | Spawn an instance of `screencap`                    |
 | ModKey-ShiftMask | X      | Spawn an instance of `slock`                        |
 
 ## Dependencies
@@ -115,6 +115,7 @@ The project uses the following dependencies:
 - `dmenu` - the dynamic menu, needed for `dmenu_run` and, optionally, other tools that utilize it
 - `feh`, needed for the background image display
 - `lmmsProjectBooter` from my [my Bash scripts](https://github.com/bratpeki/bash-scripts), needed for a keyboard shortcut to work
+- `screencap` from my [my Bash scripts](https://github.com/bratpeki/bash-scripts), needed for a keyboard shortcut to work
 - `slock`, needed for a keyboard shortcut to work
 - `xcompmgr`, needed for transparent `st` terminals (executed from `dwm-startup`)
 
