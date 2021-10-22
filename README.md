@@ -1,13 +1,13 @@
 # My forks of various tools made by Suckless
 
-## Tool tree
+## Repo tree
 
 ```
 suckless-peki
-├── imgs    Screenshots
-├── dmenu   The dynamic menu
-├── dwm     The dynamic window manager
-└── st      The simple terminal
+├── imgs     Screenshots
+├── dmenu    The dynamic menu
+├── dwm      The dynamic window manager
+└── st       The simple terminal
 ```
 
 ## Screenshots
