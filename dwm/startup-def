@@ -8,6 +8,7 @@
 batWarned=0
 
 # These are variables you should alter to your liking
+# Also, yes, I do use a laptop. LOL.
 batCriticalLevel="15"
 batCriticalMsg="Your battery is critically low (Below $batCriticalLevel%)"
 

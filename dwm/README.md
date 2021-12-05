@@ -58,43 +58,14 @@ Changes include:
 
 ## Installation
 
-The installation is comprised of these steps:
-
-1. Clone the repo
-2. Copy the `startup-def` file into where `dwm.c` will be reading it
-
-(default: `$HOME/.config/suckless-peki/dwm-startup`)
-
-<b>OR</b>
-
-2. Change the `config.h`'s `execcom` value to the path of the startup file
-3. Optionally, clone [bash-scripts](https://github.com/bratpeki/bash-scripts) and add it to your `$PATH`
-4. Compile the dwm folder
-
-The installation process should resemble the following:
+The installation is done simply by running:
 
 ```sh
-REPO_LOCATION="" # add where the repo would be installed here
-
-# Cloning the repo
-mkdir -p "$REPO_LOCATION"
-cd "$REPO_LOCATION"
-git clone https://github.com/bratpeki/suckless-peki/ .
-
-# Copying the file over into the config files
-# Copying is done rathen than moving or running from source,
-# in order to perserve the original file
-cd dwm
-mkdir -p $HOME/.config/suckless-peki
-
-# config.h stores the exec path as "$HOME/.config/suckless-peki/dwm-startup &"
-cp -n ./startup-def $HOME/.config/suckless-peki/dwm-startup
-
-# Building the source code
-# Makefile hasn't been edited yet, since "sudo make clean install"
-# would create the startup file in /root/, making editing tedious
-sudo make clean install
+make install_add        # The dwm-startup install
+sudo make clean install # The base DWM installation
 ```
+
+Optionally, clone [bash-scripts](https://github.com/bratpeki/bash-scripts) and add it to your `$PATH`
 
 ## Keymaps
 

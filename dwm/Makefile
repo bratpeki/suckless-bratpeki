@@ -44,6 +44,10 @@ install: all
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
 
+install_add:
+	mkdir -p ${HOME}/.config/suckless-peki/
+	cp -n ./startup-def ${HOME}/.config/suckless-peki/dwm-startup
+
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwm\
 		${DESTDIR}${MANPREFIX}/man1/dwm.1
