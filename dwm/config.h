@@ -13,7 +13,7 @@ static const char col_gray1[]       = "#111";    /* "#222223" */
 static const char col_gray2[]       = "#333";    /* "#444444" */
 static const char col_gray3[]       = "#aaa";    /* "#bbbbbb" */
 static const char col_gray4[]       = "#ddd";    /* "#eeeeee" */
-static const char col_cyan[]        = "#502739"; /* "#005577" */
+static const char col_cyan[]        = "#009e00"; /* "#005577" */
 
 static const char *fonts[]          = { "Hack Nerd Font Mono:pixelsize=16:antialias=true:autohint=true" };
 static const char dmenufont[]       = "Hack Nerd Font Mono:pixelsize=16:antialias=true:autohint=true";

@@ -13,7 +13,7 @@ batCriticalLevel="15"
 batCriticalMsg="Your battery is critically low (Below $batCriticalLevel%)"
 
 # =============================== SHELL COMMANDS =============================== #
-bgman -l         # Background image
+$HOME/.fehbg     # Background image
 setxkbmap ba     # X keyboard layout
 xcompmgr &       # X Composite Manager
 # ================================ REGION END ================================== #
