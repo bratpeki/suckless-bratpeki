@@ -82,10 +82,13 @@ Optionally, clone [bash-scripts](https://github.com/bratpeki/bash-scripts) and a
 
 The project uses the following dependencies:
 
+- `acpi`, needed for the statusbar
 - `bgman` from [my Bash scripts](https://github.com/bratpeki/bash-scripts), needed to load the background image of your choice
 - `dmenu` - the dynamic menu, needed for `dmenu_run` and, optionally, other tools that utilize it
 - `feh`, needed for the background image display
+- `iwgetid`, needed for the statusbar
 - `lmmsProjectBooter` from my [my Bash scripts](https://github.com/bratpeki/bash-scripts), needed for a keyboard shortcut to work
+- `networkmanager (nmcli)`, needed for the statusbar
 - `screencap` from my [my Bash scripts](https://github.com/bratpeki/bash-scripts), needed for a keyboard shortcut to work
 - `slock`, needed for a keyboard shortcut to work
 - `xcompmgr`, needed for transparent `st` terminals (executed from `dwm-startup`)
