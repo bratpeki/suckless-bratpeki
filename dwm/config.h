@@ -27,7 +27,7 @@ static const char *colors[][3]      = {
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 /* exec command when executing the startup */
-static const char execcom[] = "$HOME/.config/suckless-peki/dwm-startup &";
+static const char execcom[] = "$HOME/.config/suckless-bratpeki/dwm-startup &";
 
 /* likeweise, exec command when killing the startup */
 static const char killcom[] = "killall dwm-startup";
@@ -73,17 +73,19 @@ static const char *spawnLMMS[]       = { "lmmsProjectBooter", NULL };
 static const char *spawnMixer[]      = { "st", "-e", "alsamixer", NULL };
 static const char *spawnScreencap[]  = { "screencap", NULL };
 static const char *spawnSlock[]      = { "slock", NULL };
+static const char *spawnWebcam[]     = { "mpv", "/dev/video0", "--no-cache", "--untimed", "--no-demuxer-thread", "--video-sync=audio", "--vd-lavc-threads=1", "-vf=hflip", "&", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = spawnLMMS} },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = spawnMixer} },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = spawnScreencap} },
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = spawnSlock} },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = spawnWebcam} },
 
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },

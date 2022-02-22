@@ -45,8 +45,8 @@ install: all
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
 
 install_add:
-	mkdir -p ${HOME}/.config/suckless-peki/
-	cp -n ./startup-def ${HOME}/.config/suckless-peki/dwm-startup
+	mkdir -p ${HOME}/.config/suckless-bratpeki/
+	cp -n ./startup-def ${HOME}/.config/suckless-bratpeki/dwm-startup
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwm\

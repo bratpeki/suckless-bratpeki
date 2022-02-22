@@ -53,6 +53,7 @@ and (re)compiling the source code.
 ## Changes to the original project
 
 Changes include:
+- Added keyboard shortcuts
 - Addition of a `startup` shell script, handling the startup process, statusbar and battery managment (for laptops)
 - Different colorscheme
 - Patches applied: [tilegap](https://dwm.suckless.org/patches/tilegap/)
@@ -78,17 +79,19 @@ Optionally, clone [bash-scripts](https://github.com/bratpeki/bash-scripts) and a
 | ModKey-ShiftMask | M      | Spawn an instance of `alsamixer`                    |
 | ModKey-ShiftMask | S      | Spawn an instance of `screencap`                    |
 | ModKey-ShiftMask | X      | Spawn an instance of `slock`                        |
+| ModKey-ShiftMask | W      | Spawn an instance of `mpv` focusing `/dev/video0`   |
 
 ## Dependencies
 
 The project uses the following dependencies:
 
-- `acpi`, needed for the statusbar
+- `acpi`, needed for the statusbar (battery)
 - `bgman` from [my Bash scripts](https://github.com/bratpeki/bash-scripts), needed to load the background image of your choice
 - `dmenu` - the dynamic menu, needed for `dmenu_run` and, optionally, other tools that utilize it
 - `feh`, needed for the background image display
 - `iwgetid`, needed for the statusbar
 - `lmmsProjectBooter` from my [my Bash scripts](https://github.com/bratpeki/bash-scripts), needed for a keyboard shortcut to work
+- `mpv` - needed for the webcam shortcut
 - `networkmanager (nmcli)`, needed for the statusbar
 - `screencap` from my [my Bash scripts](https://github.com/bratpeki/bash-scripts), needed for a keyboard shortcut to work
 - `slock`, needed for a keyboard shortcut to work
