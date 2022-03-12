@@ -4,16 +4,16 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;         /* border pixel of windows */
-static const unsigned int gappx     = 16;        /* gap pixel between windows */
+static const unsigned int gappx     = 64;        /* gap pixel between windows */
 static const unsigned int snap      = 8;         /* snap pixel */
 static const int showbar            = 1;         /* 0 means no bar */
 static const int topbar             = 1;         /* 0 means bottom bar */
 
-static const char col_gray1[]       = "#111";    /* "#222223" */
-static const char col_gray2[]       = "#333";    /* "#444444" */
-static const char col_gray3[]       = "#aaa";    /* "#bbbbbb" */
-static const char col_gray4[]       = "#ddd";    /* "#eeeeee" */
-static const char col_cyan[]        = "#009e00"; /* "#005577" */
+static const char col_gray1[]       = "#111111";
+static const char col_gray2[]       = "#444444";
+static const char col_gray3[]       = "#aaaaaa";
+static const char col_gray4[]       = "#dddddd";
+static const char col_cyan[]        = "#008099";
 
 static const char *fonts[]          = { "Hack Nerd Font Mono:pixelsize=16:antialias=true:autohint=true" };
 static const char dmenufont[]       = "Hack Nerd Font Mono:pixelsize=16:antialias=true:autohint=true";
