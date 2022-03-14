@@ -12,8 +12,8 @@ suckless-peki
 ```
 
 ## Screenshots
-![ex1](./imgs/ex1.png)
-![ex2](./imgs/ex2.png)
-![ex3](./imgs/ex3.png)
-![ex4](./imgs/ex4.png)
+![ex1](./imgs/ex1.jpg)
+![ex2](./imgs/ex2.jpg)
+![ex3](./imgs/ex3.jpg)
+![ex4](./imgs/ex4.jpg)
 
