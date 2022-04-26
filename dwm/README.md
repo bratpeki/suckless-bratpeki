@@ -54,7 +54,7 @@ and (re)compiling the source code.
 
 Changes include:
 - Added keyboard shortcuts
-- Addition of a `startup` shell script, handling the startup process, statusbar and battery managment (for laptops)
+- Addition of a `dwm-startup` shell script, handling the startup process, statusbar and battery managment (for laptops)
 - Different colorscheme
 - Patches applied: [tilegap](https://dwm.suckless.org/patches/tilegap/)
 
@@ -96,7 +96,6 @@ The project uses the following dependencies:
 
 Dependencies from [my Bash scripts](https://github.com/bratpeki/bash-scripts):
 
-- `bgman`, needed to load the background image of your choice
 - `lmmsProjectBooter`, needed for a keyboard shortcut to work
 - `screencap`, needed for a keyboard shortcut to work
 

@@ -195,17 +195,20 @@ static Shortcut shortcuts[] = {
 	// { TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 
 	{ ShiftMask,            XK_Up,          zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Up,          zoom,           {.f = +3} },
 	{ ShiftMask,            XK_Down,        zoom,           {.f = -1} },
+
+	{ TERMMOD,              XK_Up,          zoom,           {.f = +3} },
 	{ TERMMOD,              XK_Down,        zoom,           {.f = -3} },
+
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i =  1} },
-	{ TERMMOD,              XK_Page_Up,     kscrollup,      {.i = 10} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i =  1} },
+
+	{ TERMMOD,              XK_Page_Up,     kscrollup,      {.i = 10} },
 	{ TERMMOD,              XK_Page_Down,   kscrolldown,    {.i = 10} },
 
 };

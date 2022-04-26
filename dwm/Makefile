@@ -46,7 +46,7 @@ install: all
 
 install_add:
 	mkdir -p ${HOME}/.config/suckless-bratpeki/
-	cp -n ./startup-def ${HOME}/.config/suckless-bratpeki/dwm-startup
+	cp -n ./dwm-startup-def ${HOME}/.config/suckless-bratpeki/dwm-startup
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwm\
